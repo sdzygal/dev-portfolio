@@ -1,5 +1,6 @@
 import React from "react";
 import './home.css';
+import {ContactButton, DownloadButton} from "../../components/buttons/Buttons";
 import {Link} from "react-router-dom";
 
 
@@ -14,12 +15,11 @@ const Home = () => {
     </div>
 
             <div className="home__contact">
-              <button type="button" className="resume">Download Resume</button>
-               <Link to="/contact"> <button type="button">Hire Me!</button>
-             </Link>
-            </div>
-
+      <DownloadButton />
+            <ContactButton />
         </div>
+        </div>
+
     );
 };
 

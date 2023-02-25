@@ -1,7 +1,12 @@
 import React from "react";
 import './about.css';
+import imgUrl from '../../assets/ph2.png';
+import {Link} from "react-router-dom";
+import {DownloadButton} from "../../components/buttons/Buttons";
 
-
+const professionalSummary = '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis assumenda adipisci' +
+    '                        eveniet, iure natus amet aliquam consectetur omnis aspernatur deserunt sapiente porro aperiam' +
+    '                        repudiandae molestiae eius facilis? Incidunt, accusamus.';
 const About = () => {
     return (
         <div className="about">
@@ -10,15 +15,15 @@ const About = () => {
                 <h1>About Me</h1>
                 <p>My experience</p>
             </div>
-                <img src="#" className="about__content-img" />
+
 
                 <div className="about__content-data">
-                    <p className="about__content-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis assumenda adipisci
-                        eveniet, iure natus amet aliquam consectetur omnis aspernatur deserunt sapiente porro aperiam
-                        repudiandae molestiae eius facilis? Incidunt, accusamus.
-                    </p>
-                </div>
+                    <img src={imgUrl} alt="headshot" className="about__content-img" />
+                    <div className="dashboard">
+                        <span className="about__content-description">
+                        {professionalSummary}
+                    </span>
+
 
                 <div className="about__content-info">
                     <div>
@@ -36,8 +41,13 @@ const About = () => {
                         <span className="about__content-infoName">Companies <br/> worked with</span>
                     </div>
                 </div>
+                        <div className="about-btn">
+                            <DownloadButton  />
+                        </div>
+                    </div>
+                </div>
         </div>
-            </div>
+        </div>
 
     );
 };

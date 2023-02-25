@@ -1,0 +1,22 @@
+button {
+    cursor: pointer;
+    padding: 10px 70px;
+    margin-right: 1rem;
+    background: transparent;
+    border: 1.5px solid var(--first-color);
+    border-radius: 4px;
+    outline: none;
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--first-color);
+}
+
+button:hover {
+    background: var(--first-color);
+    color: #ffffff;
+}
+
+.resume {
+    padding: 10px 40px;
+}
