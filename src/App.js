@@ -5,11 +5,12 @@ import About from "./containers/about/About";
 import Skills from "./containers/skills/Skills";
 import Portfolio from "./containers/portfolio/Portfolio";
 import Contact from "./containers/contact/Contact";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-
+        <Navbar />
 
       <Routes>
         <Route index path="/" element={<Home />} />
