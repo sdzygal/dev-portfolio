@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { DiProlog } from 'react-icons/di';
-import { FaBars } from 'react-icons/fa';
+import { TfiAlignLeft } from 'react-icons/tfi';
 import { HiX } from 'react-icons/hi';
 import { BiMoon, BiSun } from 'react-icons/bi';
 import { Link } from "react-router-dom";
@@ -57,27 +57,26 @@ const Navbar = () => {
               <div className="navbar__container">
                   <Link to='/'><DiProlog className="navbar_icon" /></Link>
               </div>
-          <ul className="navbar__container-menu">
+          <ul className={`navbar__container-menu ${toggleClick ? 'active' : ''} `}>
               {
-                  navbarData.map((props)=> (
-                      <li key={props.key} className="navbar__container-menu-item">
+                  navbarData.map((props, key)=> (
+                      <li key={key} className="navbar__container-menu-item">
                        <Link className="navbar__container-menu-item_link" to={props.to}>{props.label}</Link>
                       </li>
                   ))
               }
           </ul>
-        <div className="nav-icon" onClick={handleToggleClick}>
-            {
-                toggleClick ? <HiX className="toggleIcon" /> : <FaBars className="toggleIcon" />
-            }
-
-        </div>
           <div className="nav__btns change-theme" onClick={handleChangeTheme}>
               {
                 changeTheme ? <BiMoon /> :  <BiSun />
               }
           </div>
+          <div className="nav-icon" onClick={handleToggleClick}>
+              {
+                  toggleClick ? <HiX /> : <TfiAlignLeft />
+              }
 
+          </div>
       </div>
     );
 };

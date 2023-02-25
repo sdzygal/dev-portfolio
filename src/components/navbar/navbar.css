@@ -35,7 +35,7 @@
     text-align: center;
 }
 
-.toggleIcon {
+.nav-icon {
     font-size: 30px;
     display: none;
 }
@@ -65,4 +65,39 @@
     text-decoration: none;
     padding: 0.5rem;
     font-size: 1.3rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar__container-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        transition: all 0.5s ease;
+    }
+
+    .navbar__container-menu.active {
+        background: var(--body-color);
+        left: 0;
+        opacity: 1;
+    }
+
+    .navbar__container-menu-item {
+        border-bottom: 0.5px solid var(--first-color-lighter);
+        margin: 0px;
+        padding: 20px 0px;
+    }
+
+    .nav-icon {
+        display: block;
+        color: var(--first-color);
+        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: -4rem;
+    }
 }
