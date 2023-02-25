@@ -1,4 +1,4 @@
-export default {
+const particles = {
     background: {
         color: {
             value: "",
@@ -48,7 +48,7 @@ export default {
                 default: "bounce",
             },
             random: false,
-            speed: 4,
+            speed: 3,
             straight: false,
         },
         number: {
@@ -70,3 +70,5 @@ export default {
     },
     detectRetina: true,
 }
+
+export default particles;

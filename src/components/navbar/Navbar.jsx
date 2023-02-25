@@ -68,7 +68,7 @@ const Navbar = () => {
           </ul>
           <div className="nav__btns change-theme" onClick={handleChangeTheme}>
               {
-                changeTheme ? <BiMoon /> :  <BiSun />
+                changeTheme ? <BiSun /> :  <BiMoon />
               }
           </div>
           <div className="nav-icon" onClick={handleToggleClick}>

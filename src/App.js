@@ -30,6 +30,7 @@ function App() {
 
         <Navbar />
 
+        <div className="main">
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -37,6 +38,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
+        </div>
     </div>
   );
 }
