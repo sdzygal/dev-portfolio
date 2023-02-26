@@ -19,7 +19,7 @@ const navbarData = [
     },
     {
         key: 3,
-        label: 'Portfolio',
+        label: 'Projects',
         to: '/portfolio'
     },
     {
