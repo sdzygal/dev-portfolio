@@ -1,7 +1,9 @@
 import React from "react";
 import "./skills.css";
-import SkillsToggle from "./SkillsToggle";
+import SkillsCanvas from "./SkillsCanvas";
 
+
+const skillsSummary = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis assumenda adipisci eveniet, iure natus amet aliquam consectetur omnis aspernatur deserunt sapiente porro aperiam repudiandae molestiae eius facilis? Incidunt, accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis assumenda adipisci eveniet, iure natus amet.'
 
 const Skills = () => {
 
@@ -11,7 +13,10 @@ const Skills = () => {
             <h1>Skills</h1>
                 <p>My Technical Stack</p>
         </div>
-        <SkillsToggle />
+            <div className="skills__main">
+                <p>{skillsSummary}</p>
+        <SkillsCanvas />
+            </div>
         </div>
     );
 };
