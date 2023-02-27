@@ -1,0 +1,20 @@
+.socialMedia__container {
+    width: 2%;
+}
+
+.socialMedia__container-icons {
+    font-size: 20px;
+    margin-top: 12rem;
+
+}
+
+.git,
+.linkedin {
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+.git:active,
+.linkedin:active {
+    color: var(--first-color-lighter);
+}

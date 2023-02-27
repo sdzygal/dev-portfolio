@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import {skillsData} from "../../utils/skillsData";
+import "../../utils/tagcanvas";
 
 
 const SkillsCanvas = () => {
@@ -15,7 +16,7 @@ const SkillsCanvas = () => {
             shape: 'sphere',
             zoom: 0.8,
             wheelZoom: false,
-            noSelect: false,
+            noSelect: true,
             textFont: '\'Poppins\', sans-serif',
             fadeIn: 3000,
             initial: [0.3, -0.1],
