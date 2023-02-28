@@ -36,6 +36,10 @@ const Portfolio = () => {
 
     return (
         <div className="portfolio__container">
+            <h1>
+                Projects
+            </h1>
+            <p>My portfolio</p>
             <ul className="portfolio__container-filter">
                 {
                     filterData.map(item => (
