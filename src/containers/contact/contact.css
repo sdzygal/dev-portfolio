@@ -1,0 +1,126 @@
+.contact__content {
+    padding: 20px;
+    margin: 4rem 9rem;
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+
+.contact__content-header {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: var(--title-color);
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.projectIdea {
+    border-bottom: 2px solid var(--first-color-lighter);
+    width: 90%;
+    color: var(--text-color);
+    left: 18rem;
+    margin-bottom: 3rem;
+}
+
+h1:hover {
+    color: var(--first-color);
+}
+
+.contact__body {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contact__content-form {
+    margin-top: 30px;
+    width: 138%;
+}
+
+.contact__content-formWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 100%;
+    font-family: var(--body-font);
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--first-color-lighter) ;
+    padding: 16px 12px;
+    transition: all 0.5s ease;
+    position: relative;
+
+}
+
+input::placeholder {
+   color: var(--text-color);
+    font-size: 14px;
+}
+
+.projectLabel li{
+   display: inline-block;
+  font-size: 14px;
+    color: var(--text-color-light);
+    margin: 0.2rem 0 2rem;
+}
+
+.contact__content-form_rightSide {
+    font-family: var(--body-font);
+    flex: 0.6;
+    position: relative;
+    left: 26.4rem;
+    margin-top: 3rem;
+
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.startDateLabel {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 0.5rem ;
+}
+
+.newDate {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.5rem;
+}
+
+.inputStartDate {
+    width: 50%;
+    color: var(--text-color);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(50%);
+}
+
+
+
+
+
+
+
+.contact__content-form_rightSide li {
+    display: list-item;
+    list-style: inside;
+    font-size: 12px;
+    margin: -1.2rem;
+    color: var(--text-color);
+}
