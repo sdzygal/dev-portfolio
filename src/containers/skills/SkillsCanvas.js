@@ -41,7 +41,7 @@ const SkillsCanvas = () => {
                     width: '100%',
                     zIndex: '99',
                     position: 'relative',
-                    margin: '-4rem auto',
+                    margin: '-3rem 0 0 -2rem',
                 }}
                 className='to-fade-in fast-anim'
             ></canvas>

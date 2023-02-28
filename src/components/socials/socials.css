@@ -3,7 +3,7 @@
 }
 
 .socialMedia__container-icons {
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 12rem;
 
 }
@@ -12,6 +12,7 @@
 .linkedin {
     color: var(--first-color);
     cursor: pointer;
+    margin-top: 0.5rem;
 }
 
 .git:active,
