@@ -48,3 +48,43 @@
 }
 
 
+@media only screen and (max-width: 1200px) {
+    .canvas-container {
+        margin-top: 4rem;
+    }
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .canvas-container {
+        margin-top: 8rem;
+    }
+
+    .skills__main {
+        margin: 0 0 0 6rem;
+
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 967px) {
+    .canvas-container {
+        margin-top: 2rem;
+    }
+
+    .skills__main {
+       flex-direction: column;
+    }
+
+    .skills__main p {
+        max-width: 100%;
+        padding: 2rem;
+        margin-top: -3rem;
+    }
+
+    .socialMedia__container {
+       display: none;
+    }
+}
+
