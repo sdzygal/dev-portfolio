@@ -45,7 +45,7 @@ const Contact  = () => {
                             <input required name="name" className="inputName" type="text" placeholder="Your name" />
                             <input required name="email" className="inputEmail" type="text" placeholder="Your email" />
                         </div>
-                            <input name="project" className="inputProject" type="text" placeholder="Project details" />
+                            <textarea name="project" className="inputProject" rows="0" placeholder="Project details" />
                         <label htmlFor="project" className="projectLabel">
                             <ul>
                                 <li>

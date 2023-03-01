@@ -24,7 +24,7 @@ h1 {
 
 .projectIdea {
     border-bottom: 2px solid var(--first-color-lighter);
-    max-width: 90%;
+    max-width: 84%;
     color: var(--text-color);
     left: 18rem;
     margin-bottom: 3rem;
@@ -52,7 +52,8 @@ h1:hover {
     margin-bottom: 30px;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     font-family: var(--body-font);
     background-color: transparent;
@@ -65,8 +66,13 @@ input {
 
 }
 
+textarea {
+    padding: 0 12px;
+}
 
-input::placeholder {
+
+input::placeholder,
+textarea::placeholder {
    color: var(--text-color);
     font-size: 14px;
 }
@@ -144,3 +150,61 @@ p {
     align-content: center;
     margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 1200px) {
+    .contact__content-form {
+        width: 100%;
+    }
+
+    .projectIdea {
+        width: 70%;
+    }
+
+    .projectLabel li{
+        font-size: 12px;
+        padding: 10px 3px;
+        margin: 3px;
+    }
+
+    .contact__content-form_rightSide {
+       left: 10rem;
+    }
+}
+
+@media only screen and (max-width: 788px) {
+    .contact__content {
+        padding: 20px;
+        margin: 2rem 4rem;
+        font-family: var(--body-font);
+        color: var(--text-color);
+    }
+
+    .contact__content-formWrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .projectIdea {
+        font-size: 4rem;
+        max-width: 100%;
+        color: var(--text-color);
+        left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .inputStartDate {
+        max-width: 100%;
+
+    }
+
+    .contact__content-form_rightSide {
+        display: none;
+
+    }
+
+}
+
+
