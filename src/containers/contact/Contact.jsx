@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import "./contact.css";
 import {Animate} from "react-simple-animate";
 import { GiSmartphone, GiEnvelope} from "react-icons/gi";
 
 
 
-const Contact  = () => {
+    const Contact  = () => {
+        const form = useRef();
+        const sendEmail = (e) => {
+            e.preventDefault();
+
+            emailjs.sendForm('service_7t6as7k', 'template_ql1604d', form.current, 'G0YKxxoi0_SlvtXNQ')
+                .then((result) => {
+                    return (
+                        <div className="success_message">
+                        <p>Thanks for your email. I will contact you very shortly!</p>
+                        </div>
+                    );
+                }, (error) => {
+                    return (
+                        <div className="err_message">
+                        <p>Something went wrong. Try again, please!</p>
+                        </div>
+                    );
+                });
+        };
+
+
     return (
         <div className="contact">
 
@@ -40,7 +62,7 @@ const Contact  = () => {
                     }}
                 >
 
-                    <div className="contact__content-form">
+                    <form ref={form} onSubmit={sendEmail} className="contact__content-form">
                         <div className="contact__content-formWrapper">
                             <input required name="name" className="inputName" type="text" placeholder="Your name" />
                             <input required name="email" className="inputEmail" type="text" placeholder="Your email" />
@@ -69,8 +91,8 @@ const Contact  = () => {
                         </label>
                         <input name="startDate" className="inputStartDate" type="date" placeholder="Select date..." />
                     </div>
-                        <button type="button">Submit</button>
-                    </div> </Animate>
+                     <button type="submit">Submit</button>
+                    </form> </Animate>
                     <div className="contact__content-form_rightSide">
                         <h2>Tell me about your vision:</h2>
                         <ul>

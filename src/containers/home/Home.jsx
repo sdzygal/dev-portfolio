@@ -1,6 +1,7 @@
 import React from "react";
 import './home.css';
-import {ContactButton, DownloadButton} from "../../components/buttons/Buttons";
+import { ContactButton, DownloadButton } from "../../components/buttons/Buttons";
+
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
     </div>
 
             <div className="home__contact">
-      <DownloadButton />
+                <DownloadButton />
             <ContactButton />
         </div>
         </div>
