@@ -1,7 +1,8 @@
 import React from "react";
 import "./contact.css";
 import {Animate} from "react-simple-animate";
-import SocialMedia from "../../components/socials/SocialMedia";
+import { GiSmartphone, GiEnvelope} from "react-icons/gi";
+
 
 
 const Contact  = () => {
@@ -78,6 +79,10 @@ const Contact  = () => {
                             <li>What would success look like?</li>
                             <li>How much are you planning to spend to get there?</li>
                         </ul>
+                        <div className="contact__contacts">
+                        <p><GiSmartphone className="phone" /> +1 780 246 4194</p>
+                        <p><GiEnvelope className="email" />sdzygal@gmail.com</p>
+                        </div>
                     </div>
                 </div>
         </div>

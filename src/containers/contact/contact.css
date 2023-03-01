@@ -24,7 +24,7 @@ h1 {
 
 .projectIdea {
     border-bottom: 2px solid var(--first-color-lighter);
-    width: 90%;
+    max-width: 90%;
     color: var(--text-color);
     left: 18rem;
     margin-bottom: 3rem;
@@ -61,8 +61,10 @@ input {
     padding: 16px 12px;
     transition: all 0.5s ease;
     position: relative;
+    outline: none;
 
 }
+
 
 input::placeholder {
    color: var(--text-color);
@@ -74,6 +76,7 @@ input::placeholder {
   font-size: 14px;
     color: var(--text-color-light);
     margin: 0.2rem 0 2rem;
+    cursor: unset;
 }
 
 .contact__content-form_rightSide {
@@ -103,7 +106,7 @@ h2 {
 }
 
 .inputStartDate {
-    width: 50%;
+    max-width: 50%;
     color: var(--text-color);
 }
 
@@ -113,14 +116,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 
-
-
-
-
 .contact__content-form_rightSide li {
     display: list-item;
     list-style: inside;
     font-size: 12px;
     margin: -1.2rem;
     color: var(--text-color);
+    cursor: unset;
+}
+
+.contact__contacts {
+
+    justify-content: center;
+    padding-top: 5rem;
+    font-size: 14px;
+}
+
+.phone,
+.email {
+    color: var(--first-color);
+    font-size: 25px;
+    margin-right: 1rem;
+}
+
+p {
+    display: flex;
+    align-content: center;
+    margin-bottom: 1rem;
 }

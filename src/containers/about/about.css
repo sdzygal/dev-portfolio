@@ -128,3 +128,32 @@
         justify-content: space-evenly;
     }
 }
+
+@media only screen and (max-width: 744px) {
+    .socialMedia__container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .about__content-data {
+        margin: 0;
+    }
+
+    .about__content-description {
+        font-size: 14px;
+        padding: 20px 15px;
+
+    }
+
+    .dashboard {
+        font-size: 14px;
+        width: 100%;
+
+    }
+
+    .about__content-infoTitle {
+        font-size: 20px;
+    }
+
+}

@@ -17,7 +17,7 @@ const Skills = () => {
             <div className="skills__main">
                 <SocialMedia />
                 <p>{skillsSummary}</p>
-        <SkillsCanvas />
+                  <SkillsCanvas />
             </div>
         </div>
     );

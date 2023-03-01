@@ -1,7 +1,7 @@
 import React from "react";
 import './about.css';
 import imgUrl from '../../assets/ph2.png';
-import {Link} from "react-router-dom";
+import {Animate} from "react-simple-animate";
 import {DownloadButton} from "../../components/buttons/Buttons";
 import SocialMedia from "../../components/socials/SocialMedia";
 
@@ -11,27 +11,38 @@ const professionalSummary = '   Lorem ipsum dolor sit amet consectetur adipisici
 const About = () => {
     return (
         <div className="about">
+
             <div className="about__content">
                 <div className="about__content-header">
                 <h1>About Me</h1>
                 <p>My experience</p>
             </div>
-
-
+                <Animate
+                play
+                duration={1}
+                delay={0}
+                start={{
+                    transform: "translateX(-200px)"
+                }}
+                end={{
+                    transform: "translateX(0px)"
+                }}
+            >
                 <div className="about__content-data">
+
                     <SocialMedia />
-                    <img src={imgUrl} alt="headshot" className="about__content-img" />
+                        <img src={imgUrl} alt="headshot" className="about__content-img" />
                     <div className="dashboard">
                         <span className="about__content-description">
                         {professionalSummary}
                     </span>
-
 
                 <div className="about__content-info">
                     <div>
                         <span className="about__content-infoTitle">01+</span>
                         <span className="about__content-infoName">Years <br/> experience </span>
                     </div>
+
 
                     <div>
                         <span className="about__content-infoTitle">10+</span>
@@ -45,10 +56,11 @@ const About = () => {
                 </div>
                         <div className="about-btn">
                             <DownloadButton  />
-                        </div>
-                    </div>
-                </div>
-        </div>
+                            </div>
+              </div>
+                </div></Animate>
+  </div>
+
         </div>
 
     );

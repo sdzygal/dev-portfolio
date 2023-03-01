@@ -60,3 +60,7 @@ body {
 #root {
     height: 100%;
 }
+
+::selection {
+    color: var(--first-color);
+}

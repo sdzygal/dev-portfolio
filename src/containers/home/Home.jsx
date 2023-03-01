@@ -1,7 +1,6 @@
 import React from "react";
 import './home.css';
 import {ContactButton, DownloadButton} from "../../components/buttons/Buttons";
-import {Link} from "react-router-dom";
 
 
 const Home = () => {
