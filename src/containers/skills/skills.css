@@ -69,7 +69,7 @@
 
 
 
-@media only screen and (min-width: 768px) and (max-width: 967px) {
+@media only screen and (max-width: 967px) {
     .canvas-container {
         margin-top: 2rem;
     }
