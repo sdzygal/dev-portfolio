@@ -101,6 +101,7 @@ h2 {
 
 .startDateLabel {
     font-size: 14px;
+    padding: 0 12px;
     color: var(--text-color);
     margin-bottom: 0.5rem ;
 }
@@ -150,6 +151,64 @@ p {
     align-content: center;
     margin-bottom: 1rem;
 }
+
+
+.modal {
+    font-size: 12px;
+    background-color: #ffffff;
+    width: 610px;
+    height: 250px;
+    border-radius: 18px;
+    box-shadow: 0 0 50px var(--text-color-light);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.modal:hover {
+    box-shadow: 0 0 50px var(--first-color-lighter);
+}
+
+.modal > .close {
+    height: 35px;
+    line-height: 22px;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 4px 8px;
+    right: 20px;
+    top: 15px;
+    font-size: 22px;
+    background: #ffffff;
+    color: var(--body-font);
+    border: none;
+}
+
+.modal > .close:hover {
+    color: var(--first-color);
+    transform: scale(1.3);
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem;
+}
+
+.message h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--body-font);
+    font-weight: 600;
+    font-size: 22px;
+    color: #000000;
+}
+
+.message h2:hover {
+    color: var(--first-color);
+}
+
 
 @media only screen and (max-width: 1200px) {
     .contact__content-form {

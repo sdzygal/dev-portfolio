@@ -1,28 +1,55 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import "./contact.css";
 import {Animate} from "react-simple-animate";
 import { GiSmartphone, GiEnvelope} from "react-icons/gi";
+import Popup from "reactjs-popup";
 
+const title = {
+    success: 'Thanks for your email. I will contact you very shortly!',
+    err: 'Something went wrong. Please, try again later!'
+}
+
+let message;
 
 
     const Contact  = () => {
         const form = useRef();
+        const [open, setOpen] = useState(false);
+        const closeModal = () => setOpen(false);
+
+        function ContactPopup() {
+
+            return (
+                <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+                    <div className="modal">
+                        <a className="close" onClick={closeModal}>
+                            &times;
+                        </a>
+                        <div className="message">
+                            <h2>{message}</h2>
+                        </div>
+                    </div>
+                </Popup>
+
+            );
+        }
+
+
+
         const sendEmail = (e) => {
             e.preventDefault();
 
             emailjs.sendForm('service_7t6as7k', 'template_ql1604d', form.current, 'G0YKxxoi0_SlvtXNQ')
                 .then((result) => {
-                    return (
-                        <div className="success_message">
-                        <p>Thanks for your email. I will contact you very shortly!</p>
-                        </div>
-                    );
+                    message = title.success;
+                   return (
+                       setOpen(true)
+                   );
                 }, (error) => {
+                    message = title.err;
                     return (
-                        <div className="err_message">
-                        <p>Something went wrong. Try again, please!</p>
-                        </div>
+                    setOpen(true)
                     );
                 });
         };
@@ -61,7 +88,7 @@ import { GiSmartphone, GiEnvelope} from "react-icons/gi";
                         transform: "translateX(0px)"
                     }}
                 >
-
+                      <ContactPopup />
                     <form ref={form} onSubmit={sendEmail} className="contact__content-form">
                         <div className="contact__content-formWrapper">
                             <input required name="name" className="inputName" type="text" placeholder="Your name" />
