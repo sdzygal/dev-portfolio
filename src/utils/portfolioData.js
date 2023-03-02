@@ -3,7 +3,7 @@ import projectImg2 from "../assets/2023-02-20 12.23.52.jpg";
 
 export const portfolioData = [
     {
-        id: 1,
+        id: 3,
         name: 'Ecommerce',
         image: projectImg,
         link: ''
@@ -21,8 +21,8 @@ export const portfolioData = [
         link: ''
     },
     {
-        id: 1,
-        name: 'Ecommerce',
+        id: 2,
+        name: 'Ecommerce1',
         image: projectImg,
         link: ''
     }
