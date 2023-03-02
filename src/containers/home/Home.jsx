@@ -8,9 +8,9 @@ const Home = () => {
     return (
         <div className="home">
     <div className="home__content">
-        <h1>Hello, I am Alexandra
+        <h1>Hello, <span>I</span> <span>am Alexandra</span>
         <br/>
-            Fullstack Web Developer
+            Fullstack<span> Web</span> <span>Developer</span>
         </h1>
     </div>
 
