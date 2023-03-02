@@ -23,7 +23,7 @@ let message;
             return (
                 <Popup open={open} closeOnDocumentClick onClose={closeModal}>
                     <div className="modal">
-                        <a className="close" onClick={closeModal}>
+                        <a href="#" target="_self" className="close" onClick={closeModal}>
                             &times;
                         </a>
                         <div className="message">
@@ -94,7 +94,7 @@ let message;
                             <input required name="name" className="inputName" type="text" placeholder="Your name" />
                             <input required name="email" className="inputEmail" type="text" placeholder="Your email" />
                         </div>
-                            <textarea name="project" className="inputProject" rows="0" placeholder="Project details" />
+                            <textarea name="project" className="inputProject" type="text" rows="0" placeholder="Project details" />
                         <label htmlFor="project" className="projectLabel">
                             <ul>
                                 <li>
