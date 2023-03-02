@@ -4,7 +4,7 @@ import SkillsCanvas from "./SkillsCanvas";
 import SocialMedia from "../../components/socials/SocialMedia";
 
 
-const skillsSummary = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis assumenda adipisci eveniet, iure natus amet aliquam consectetur omnis aspernatur deserunt sapiente porro aperiam repudiandae molestiae eius facilis? Incidunt, accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis assumenda adipisci eveniet, iure natus amet.'
+const skillsSummary = 'I specialize in working with both front-end and back-end development. My tech stack: JavaScript, Node.js, React.js, Express, MongoDB, MySQL, working with APIs and very interested in self-development and learning new languages. I persistently learn new technologies and improve as a developer to be a good professional. '
 
 const Skills = () => {
 

@@ -5,9 +5,7 @@ import {Animate} from "react-simple-animate";
 import {DownloadButton} from "../../components/buttons/Buttons";
 import SocialMedia from "../../components/socials/SocialMedia";
 
-const professionalSummary = '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veritatis assumenda adipisci' +
-    '                        eveniet, iure natus amet aliquam consectetur omnis aspernatur deserunt sapiente porro aperiam' +
-    '                        repudiandae molestiae eius facilis? Incidunt, accusamus.';
+const professionalSummary = ' I am a promising and passionate software developer who is continuously learning and growing. I specialize in working with both front-end and back-end development. I always focus on writing highly readable, easily maintainable and scalable code, and understand the importance of creating intuitive user interfaces and testing things so they can work and optimize your code for the best performance you can make of it.';
 const About = () => {
     return (
         <div className="about">
@@ -34,12 +32,13 @@ const About = () => {
                         <img src={imgUrl} alt="headshot" className="about__content-img" />
                     <div className="dashboard">
                         <span className="about__content-description">
-                        {professionalSummary}
+                            <p>I am a promising and passionate software developer who is continuously learning and growing. I specialize in working with both front-end and back-end development. </p>
+                            <p>I always focus on writing highly readable, easily maintainable and scalable code, and understand the importance of creating intuitive user interfaces and testing things so they can work and optimize your code for the best performance you can make of it.</p>
                     </span>
 
                 <div className="about__content-info">
                     <div>
-                        <span className="about__content-infoTitle">01+</span>
+                        <span className="about__content-infoTitle">02+</span>
                         <span className="about__content-infoName">Years <br/> experience </span>
                     </div>
 

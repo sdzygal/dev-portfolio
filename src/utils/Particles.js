@@ -4,7 +4,7 @@ const particles = {
             value: "",
         },
     },
-    fpsLimit: 40,
+    fpsLimit: 100,
     interactivity: {
         events: {
             onClick: {

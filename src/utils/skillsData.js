@@ -28,4 +28,7 @@ export const skillsData = [
     { href: "#figma", title: "Figma" },
     { href: "#illustrator_", title: "Illustrator" },
     { href: "#vs", title: "Visual Studio Code" },
+    { href: "#threejs", title: "Three.js" },
+    { href: "#stripe", title: "Stripe" },
+    { href: "#canvas", title: "Canvas" },
    ]
