@@ -5,17 +5,13 @@ import {Animate} from "react-simple-animate";
 import { GiSmartphone, GiEnvelope} from "react-icons/gi";
 import Popup from "reactjs-popup";
 
-const title = {
-    success: 'Thanks for your email. I will contact you very shortly!',
-    err: 'Something went wrong. Please, try again later!'
-}
 
-let message;
 
 
     const Contact  = () => {
         const form = useRef();
         const [open, setOpen] = useState(false);
+        const [title, setTitle] = useState('success');
         const closeModal = () => setOpen(false);
 
         function ContactPopup() {
@@ -27,7 +23,7 @@ let message;
                             &times;
                         </a>
                         <div className="message">
-                            <h2>{message}</h2>
+                            <h2>{title}</h2>
                         </div>
                     </div>
                 </Popup>
@@ -37,19 +33,20 @@ let message;
 
 
 
+
+
         const sendEmail = (e) => {
             e.preventDefault();
 
             emailjs.sendForm('service_7t6as7k', 'template_ql1604d', form.current, 'G0YKxxoi0_SlvtXNQ')
                 .then((result) => {
-                    message = title.success;
+
                    return (
-                       setOpen(true)
+                       setOpen(true) & setTitle('Thanks for your email. I will contact you very shortly!')
                    );
                 }, (error) => {
-                    message = title.err;
                     return (
-                    setOpen(true)
+                    setOpen(true) &  setTitle('Something went wrong. Please, try again later')
                     );
                 });
         };
