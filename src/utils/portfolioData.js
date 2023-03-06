@@ -2,6 +2,7 @@ import personalWebImg from "../assets/personalWebsite-light.png";
 import ntwistWebImg from "../assets/ntwist-light.png";
 import scaleAppImg from "../assets/scaleApp-light.png";
 
+
 export const portfolioData = [
     {
         id: 3,

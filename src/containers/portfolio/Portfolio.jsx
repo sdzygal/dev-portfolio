@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { portfolioData } from "../../utils/portfolioData";
 import "./portfolio.css";
+import {Link} from "react-router-dom";
 
 const filterData = [
     {
@@ -67,8 +68,8 @@ const Portfolio = () => {
                                     index === hoveredValue && (
                                         <div>
                                             <p>{item.name}</p>
-                                            <button>Visit repo</button>
-                                        </div>
+                                           <Link to={item.link} target="_blank"><button>Visit repo</button></Link>
+                                    </div>
                                     )
                                 }
                             </div>

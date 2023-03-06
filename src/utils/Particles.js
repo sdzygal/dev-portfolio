@@ -38,17 +38,14 @@ const particles = {
             opacity: 0.5,
             width: 1,
         },
-        collisions: {
-            enable: true,
-        },
         move: {
             directions: "none",
             enable: true,
             outModes: {
-                default: "bounce",
+                default: "bounce"
             },
             random: false,
-            speed: 3,
+            speed: 4,
             straight: false,
         },
         number: {
