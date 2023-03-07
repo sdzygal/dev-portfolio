@@ -1,6 +1,7 @@
 import personalWebImg from "../assets/personalWebsite-light.png";
 import ntwistWebImg from "../assets/ntwist-light.png";
 import scaleAppImg from "../assets/scaleApp-light.png";
+import emailyImg from "../assets/server-light.png";
 
 
 export const portfolioData = [
@@ -9,6 +10,12 @@ export const portfolioData = [
         name: 'Company Website',
         image: ntwistWebImg,
         link: 'https://github.com/sdzygal/ntwist_website'
+    },
+    {
+        id: 2,
+        name: 'Emaily App',
+        image: emailyImg,
+        link: 'https://github.com/sdzygal/emaily'
     },
     {
         id: 3,
