@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import "./contact.css";
 import {Animate} from "react-simple-animate";
@@ -12,6 +12,7 @@ import Popup from "reactjs-popup";
         const form = useRef();
         const [open, setOpen] = useState(false);
         const [title, setTitle] = useState('success');
+
         const closeModal = () => setOpen(false);
 
         function ContactPopup() {
@@ -38,6 +39,7 @@ import Popup from "reactjs-popup";
         const sendEmail = (e) => {
             e.preventDefault();
 
+
             emailjs.sendForm('service_7t6as7k', 'template_ql1604d', form.current, 'G0YKxxoi0_SlvtXNQ')
                 .then((result) => {
 
@@ -50,7 +52,6 @@ import Popup from "reactjs-popup";
                     );
                 });
         };
-
 
     return (
         <div className="contact">
@@ -88,8 +89,8 @@ import Popup from "reactjs-popup";
                       <ContactPopup />
                     <form ref={form} onSubmit={sendEmail} className="contact__content-form">
                         <div className="contact__content-formWrapper">
-                            <input required name="name" className="inputName" type="text" placeholder="Your name" />
-                            <input required name="email" className="inputEmail" type="text" placeholder="Your email" />
+                            <input required name="name" className="inputName" type="text" placeholder="Your name"  />
+                            <input required name="email" className="inputEmail" type="text" placeholder="Your email"  />
                         </div>
                             <textarea name="project" className="inputProject" type="text" rows="0" placeholder="Project details" />
                         <label htmlFor="project" className="projectLabel">
