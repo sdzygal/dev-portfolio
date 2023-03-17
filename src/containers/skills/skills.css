@@ -48,6 +48,30 @@
 
 }
 
+.canvas-container {
+    position: relative;
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.tagcloud {
+    display: inline-block;
+    font-size: 15.2px;
+    font-weight: 100;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item {
+    color: var(--first-color);
+}
+
+.tagcloud--item:hover {
+    color: var(--first-color-lighter);
+}
 
 @media only screen and (max-width: 1200px) {
     .canvas-container {
