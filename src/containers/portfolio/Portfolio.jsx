@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import { portfolioData } from "../../utils/portfolioData";
 import "./portfolio.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { AnalyticEvent } from "../../utils/google-analytics";
 
 const filterData = [
     {
@@ -32,8 +33,6 @@ const Portfolio = () => {
     }
 
     const filteredItems = filteredValue === 1 ? portfolioData : portfolioData.filter(item => item.id === filteredValue);
-
-    console.log(filteredItems)
 
     return (
         <div className="portfolio__container">
@@ -68,7 +67,7 @@ const Portfolio = () => {
                                     index === hoveredValue && (
                                         <div>
                                             <p>{item.name}</p>
-                                           <Link to={item.link} target="_blank"><button>Visit repo</button></Link>
+                                           <Link to={item.link} target="_blank" onClick={() => AnalyticEvent("Repository Visit", "Visited")}><button>Visit repo</button></Link>
                                     </div>
                                     )
                                 }

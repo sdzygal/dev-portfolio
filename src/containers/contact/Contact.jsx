@@ -1,9 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import "./contact.css";
-import {Animate} from "react-simple-animate";
+import { Animate } from "react-simple-animate";
 import { GiSmartphone, GiEnvelope} from "react-icons/gi";
 import Popup from "reactjs-popup";
+import { AnalyticEvent } from "../../utils/google-analytics";
+
 
 
 
@@ -39,14 +41,14 @@ import Popup from "reactjs-popup";
         const sendEmail = (e) => {
             e.preventDefault();
 
-
             emailjs.sendForm('service_7t6as7k', 'template_ql1604d', form.current, 'G0YKxxoi0_SlvtXNQ')
                 .then((result) => {
-
+                    AnalyticEvent("Email", "Sent");
                    return (
                        setOpen(true) & setTitle('Thanks for your email. I will contact you very shortly!')
                    );
                 }, (error) => {
+                    AnalyticEvent("Email", "Failed");
                     return (
                     setOpen(true) &  setTitle('Something went wrong. Please, try again later')
                     );

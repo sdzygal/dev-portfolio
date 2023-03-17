@@ -8,7 +8,11 @@ import Skills from "./containers/skills/Skills";
 import Portfolio from "./containers/portfolio/Portfolio";
 import Contact from "./containers/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
+import NotFound from "./containers/not-found/NotFound";
 import particles from "./utils/Particles";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-E0GZ42ZRVT");
 
 function App() {
 
@@ -20,23 +24,22 @@ function App() {
 
     const renderParticle = location.pathname === "/";
 
+    ReactGA._gaCommandSendPageviewParameters(window.location.pathname + window.location.search);
   return (
     <div className="App">
         {
             renderParticle &&  <Particles id="particles" options={particles} init={handleInit} />
         }
 
-
-
         <Navbar />
-
         <div className="main">
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
+          <Route path="*" component={<NotFound />} />
       </Routes>
         </div>
     </div>
