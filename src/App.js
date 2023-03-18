@@ -8,7 +8,7 @@ import Skills from "./containers/skills/Skills";
 import Portfolio from "./containers/portfolio/Portfolio";
 import Contact from "./containers/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
-import NotFound from "./containers/not-found/NotFound";
+import NotFound from "./containers/not_found/NotFound";
 import particles from "./utils/Particles";
 import ReactGA from "react-ga4";
 
@@ -39,7 +39,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
-          <Route path="*" component={<NotFound />} />
+          <Route path="/404" element={<NotFound />} />
       </Routes>
         </div>
     </div>
