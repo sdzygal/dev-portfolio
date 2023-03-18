@@ -1,7 +1,7 @@
 import React from "react";
 import "./button.css";
 import { Link } from "react-router-dom";
-import cvLink from "../../assets/pdf/Alexandra Dzygal Resume -  Web Developer.pdf";
+import cvLink from "../../assets/pdf/Alexandra_Dzygal_Resume.pdf";
 import { AnalyticEvent } from "../../utils/google-analytics";
 
 

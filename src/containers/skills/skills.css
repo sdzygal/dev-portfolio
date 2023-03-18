@@ -48,23 +48,15 @@
 
 }
 
-.canvas-container {
-    position: relative;
-    width: 80%;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99;
-}
-
 .tagcloud {
     display: inline-block;
     font-size: 15.2px;
-    font-weight: 100;
+    position: relative;
+    left: 5rem;
+    bottom: 3rem;
+    z-index: 99;
 }
 
-/* Change color of each text in sphere on hover   */
 .tagcloud--item {
     color: var(--first-color);
 }
@@ -74,16 +66,15 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .canvas-container {
-        margin-top: 4rem;
-        width: 100%;
+    .tagcloud {
+        left: 4rem;
     }
 }
 
 
 @media only screen and (max-width: 1050px) {
-    .canvas-container {
-        margin-top: 8rem;
+    .tagcloud {
+        left: 0rem;
     }
 
     .skills__main {
@@ -95,8 +86,8 @@
 
 
 @media only screen and (max-width: 967px) {
-    .canvas-container {
-        margin-top: 2rem;
+    .tagcloud {
+        left: -3rem;
     }
 
     .skills__main {

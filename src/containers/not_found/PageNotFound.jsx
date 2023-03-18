@@ -1,7 +1,8 @@
 import notFoundImg from "../../assets/not_found_page.png";
 import blobImg from "../../assets/blob.svg";
 import "./not_found.css";
-const NotFound = () => {
+
+const PageNotFound = () => {
     return (
             <div className="notFound">
                 <img src={blobImg} alt="blob" className="blob" />
@@ -13,4 +14,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default PageNotFound;

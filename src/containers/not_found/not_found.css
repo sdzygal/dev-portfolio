@@ -23,7 +23,7 @@
     flex-direction: column;
     position: absolute;
     color: var(--title-color);
-    bottom: 5rem;
+    margin-top: 30rem;
 }
 
 .notFound_content h1 {

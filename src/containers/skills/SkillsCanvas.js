@@ -1,13 +1,21 @@
-import React, { useEffect } from "react";
-import TagCloud from "TagCloud";
+import React from "react";
 import "./skills.css";
+import { TagCloud } from "@frank-mayer/react-tag-cloud";
+import {TagCloudOptions} from "@frank-mayer/react-tag-cloud";
 
 
-const SkillsCanvas = () => {
-    useEffect(() => {
-        return () => {
-            const container = ".tagcloud";
-            const texts = [
+
+const SkillsCanvas = () => (
+                <TagCloud options={(w: Window & typeof globalThis): TagCloudOptions => ({
+                    radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
+                    maxSpeed: "normal", initSpeed: "normal",
+                    keep: true, margin: '-5rem 0 0 -2rem', textFont: '\'Poppins\', sans-serif', depth: 1.5,
+                    })}
+                          onClick={(tag: string, ev: MouseEvent) => alert(tag)}
+                          onClickOptions={{ passive: true }}
+
+                >
+                    {[
                 "Git",
                 "JSON",
                 "Railway",
@@ -38,31 +46,10 @@ const SkillsCanvas = () => {
                 "Three.js",
                 "Stripe",
                 "Canvas",
-            ];
+            ]}
+                    </TagCloud>
+);
 
-            const options = {
-              radius: 280,
-                margin: '-3rem 0 0 -2rem',
-                textFont: '\'Poppins\', sans-serif',
-                depth: 1.5,
-                maxSpeed: "normal",
-                initSpeed: "normal",
-                keep: true,
-            };
-            TagCloud(container, texts, options);
-        };
-    }, []);
-
-    return (
-        <>
-        <div className='canvas-container'>
-                <ul>
-                    <span className="tagcloud"></span>
-                </ul>
-            </div>
-        </>
-    );
-};
 
 
 export default SkillsCanvas;
