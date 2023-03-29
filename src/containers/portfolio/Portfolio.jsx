@@ -67,7 +67,7 @@ const Portfolio = () => {
                                     index === hoveredValue && (
                                         <div>
                                             <p>{item.name}</p>
-                                           <Link to={item.link} target="_blank" onClick={() => AnalyticEvent("Repository Visit", "Visited")}><button>Visit repo</button></Link>
+                                           <Link to={item.link} target="_blank" onClick={() => AnalyticEvent("Repository Visit", "Visited")}><button>Open</button></Link>
                                     </div>
                                     )
                                 }
