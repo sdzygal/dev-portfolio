@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { portfolioData } from "../../utils/portfolioData";
 import "./portfolio.css";
 import { Link } from "react-router-dom";
 import { AnalyticEvent } from "../../utils/google-analytics";
+import { motion as m } from "framer-motion";
 
 const filterData = [
     {
@@ -49,7 +50,11 @@ const Portfolio = () => {
                     ))
                 }
             </ul>
-            <div className="portfolio__container-cards">
+            <m.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.75, ease: "easeOut" }}
+                className="portfolio__container-cards">
                 {
                     filteredItems.map((item, index) => (
                         <div className="portfolio__container-cards_item" key={`cardItem${item.name.trim()}`}
@@ -76,7 +81,7 @@ const Portfolio = () => {
                     ))
                 }
 
-            </div>
+            </m.div>
 
         </div>
     );
