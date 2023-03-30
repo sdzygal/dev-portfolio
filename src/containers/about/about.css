@@ -1,6 +1,8 @@
 .about {
-    width: 100%;
+    min-width: 100%;
     display: flex;
+    justify-content: center;
+    align-content: center;
     padding: 20px;
     margin-top: 1rem;
 }
@@ -101,6 +103,19 @@ p span {
     color: var(--first-color-alt);
 }
 
+
+@media screen and (min-width: 1900px) {
+    .about {
+        margin-top: 3rem;
+    }
+
+    .about__content-data {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
 @media only screen and (max-width: 1024px) {
     .about__content-img {
         max-width: 400px;
@@ -115,7 +130,7 @@ p span {
 
 @media only screen and (max-width: 768px) {
     .about__content-img {
-        max-width: 350px;
+        width: 350px;
         margin: 2rem 0;
     }
 
@@ -139,6 +154,7 @@ p span {
         justify-content: space-evenly;
     }
 }
+
 
 @media only screen and (max-width: 744px) {
     .socialMedia__container {

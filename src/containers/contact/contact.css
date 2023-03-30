@@ -1,6 +1,5 @@
 .contact__content {
-    padding: 20px;
-    margin: 4rem 9rem;
+    margin: 4rem 15rem;
     font-family: var(--body-font);
     color: var(--text-color);
 }
@@ -24,7 +23,7 @@ h1 {
 
 .projectIdea {
     border-bottom: 2px solid var(--first-color-lighter);
-    max-width: 84%;
+    max-width: 70%;
     color: var(--text-color);
     left: 18rem;
     margin-bottom: 3rem;
@@ -37,6 +36,7 @@ h1:hover {
 .contact__body {
     display: flex;
     flex-direction: row;
+    max-width: 1000px;
 
 }
 
@@ -218,13 +218,21 @@ p {
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media screen and (min-width: 1900px) {
+    .contact__body {
+        margin-left: 20rem;
+        max-width: 100%;
+
+    }
+    .contact__content-header h1 {
+      margin-left: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 1260px) {
     .contact__content-form {
         width: 100%;
-    }
-
-    .projectIdea {
-        width: 70%;
     }
 
     .projectLabel li{
@@ -234,32 +242,33 @@ p {
     }
 
     .contact__content-form_rightSide {
-       left: 10rem;
+       left: 8rem;
+    }
+
+    .projectIdea {
+        left: 10rem;
     }
 }
 
-@media only screen and (max-width: 788px) {
+@media only screen and (max-width: 874px) {
     .contact__content {
-        padding: 20px;
-        margin: 2rem 4rem;
-        font-family: var(--body-font);
-        color: var(--text-color);
+        margin: 7rem 0 0 10rem;
+    }
+
+    .projectIdea {
+      left: 3rem;
+    }
+
+    .contact__content-form {
+        width: 136%;
     }
 
     .contact__content-formWrapper {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    h1 {
+    .contact__content-header h1 {
         font-size: 4rem;
-    }
-
-    .projectIdea {
-        font-size: 4rem;
-        max-width: 100%;
-        color: var(--text-color);
-        left: 0;
-        margin-bottom: 2rem;
     }
 
     .inputStartDate {
@@ -270,6 +279,29 @@ p {
     .contact__content-form_rightSide {
         display: none;
 
+    }
+
+}
+
+@media only screen and (max-width: 560px) {
+    .contact__content-form {
+        width: 100%;
+    }
+
+    .contact__content {
+        margin: 3rem
+    }
+
+    .contact__body {
+        width: 300px;
+    }
+
+    .projectIdea {
+        display: none;
+    }
+
+    .contact__content-header h1 {
+        font-size: 3rem;
     }
 
 }

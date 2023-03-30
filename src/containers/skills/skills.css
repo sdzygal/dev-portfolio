@@ -1,5 +1,5 @@
 .skills {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -65,6 +65,18 @@
     color: var(--first-color-lighter);
 }
 
+@media screen and (min-width: 1900px) {
+    .skills {
+        margin-top: 3rem;
+    }
+
+    .skills__main {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .tagcloud {
         left: 4rem;
@@ -87,7 +99,7 @@
 
 @media only screen and (max-width: 967px) {
     .tagcloud {
-        left: -3rem;
+        left: 3.5rem;
     }
 
     .skills__main {
@@ -104,4 +116,21 @@
        display: none;
     }
 }
+
+
+@media only screen and (max-width: 512px) {
+    .tagcloud {
+        display: none;
+    }
+
+    .skills__main p {
+        padding: 5px 0 40px 0;
+        margin: -3rem 5rem 0 0;
+    }
+
+    .socialMedia__container {
+        display: none;
+    }
+}
+
 
