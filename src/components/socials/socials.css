@@ -32,7 +32,7 @@
 
 .socialMedia__container-icons a:hover{
     filter: blur(0);
-    transform: scale(1.2);
+    transform: scale(1.1);
     opacity: 1;
 }
 

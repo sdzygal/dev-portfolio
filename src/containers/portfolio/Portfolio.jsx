@@ -50,10 +50,7 @@ const Portfolio = () => {
                     ))
                 }
             </ul>
-            <m.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.75, ease: "easeOut" }}
+            <div
                 className="portfolio__container-cards">
                 {
                     filteredItems.map((item, index) => (
@@ -61,11 +58,15 @@ const Portfolio = () => {
                         onMouseEnter={() => handleHover(index)}
                              onMouseLeave={() => handleHover(null)}
                         >
-                            <div className="portfolio__container-cards_item-image">
+                            <m.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.75, ease: "easeOut" }}
+                                className="portfolio__container-cards_item-image">
                                 <a>
                                     <img alt="project" src={item.image} />
                                 </a>
-                            </div>
+                            </m.div>
 
                             <div className="overlay">
                                 {
@@ -81,7 +82,7 @@ const Portfolio = () => {
                     ))
                 }
 
-            </m.div>
+            </div>
 
         </div>
     );
