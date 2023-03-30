@@ -34,7 +34,7 @@
 .skills__main {
     display: flex;
     flex-direction: row;
-   margin: 0 0 0 12rem;
+   margin: 0 0 0 9rem;
     font-family: var(--body-font);
     color: var(--text-color);
 
