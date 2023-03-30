@@ -99,7 +99,7 @@
 
 @media only screen and (max-width: 967px) {
     .tagcloud {
-        left: -3rem;
+        left: 3.5rem;
     }
 
     .skills__main {
@@ -116,4 +116,21 @@
        display: none;
     }
 }
+
+
+@media only screen and (max-width: 512px) {
+    .tagcloud {
+        display: none;
+    }
+
+    .skills__main p {
+        padding: 5px 0 40px 0;
+        margin: -3rem 5rem 0 0;
+    }
+
+    .socialMedia__container {
+        display: none;
+    }
+}
+
 
