@@ -12,8 +12,8 @@ const SocialMedia = () => {
     return (
         <div className="socialMedia__container">
             <div className="socialMedia__container-icons">
-            <a href="https://www.linkedin.com/in/sdzyhal/" rel="noreferrer" target="_blank" onClick={() => socialTrackingEvent('LinkedIn')}><AiFillLinkedin className="linkedin" /></a>
-            <a href="https://github.com/sdzygal" rel="noreferrer" target="_blank" onClick={() => socialTrackingEvent('GitHub')}><AiFillGithub className="git" /></a>
+           <a href="https://www.linkedin.com/in/sdzyhal/" rel="noreferrer" target="_blank" onClick={() => socialTrackingEvent('LinkedIn')}><AiFillLinkedin className="linkedin" /></a>
+           <a href="https://github.com/sdzygal" rel="noreferrer" target="_blank" onClick={() => socialTrackingEvent('GitHub')}><AiFillGithub className="git" /></a>
             </div>
         </div>
     );

@@ -1,13 +1,13 @@
 import React from "react";
 import "./skills.css";
 import { TagCloud } from "@frank-mayer/react-tag-cloud";
-import {TagCloudOptions} from "@frank-mayer/react-tag-cloud";
+import { TagCloudOptions } from "@frank-mayer/react-tag-cloud";
 
 
 
 const SkillsCanvas = () => (
                 <TagCloud options={(w: Window & typeof globalThis): TagCloudOptions => ({
-                    radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
+                    radius: Math.min(550, w.innerWidth, w.innerHeight) / 2,
                     maxSpeed: "normal", initSpeed: "normal",
                     keep: true, margin: '-5rem 0 0 -2rem', textFont: '\'Poppins\', sans-serif', depth: 1.5,
                     })}
@@ -16,9 +16,9 @@ const SkillsCanvas = () => (
 
                 >
                     {[
+                        "OOP",
                 "Git",
                 "JSON",
-                "Railway",
                 "HTML",
                 "React",
                 "REST",
@@ -38,14 +38,16 @@ const SkillsCanvas = () => (
                 "Postman",
                 "IDEE",
                 "NodeJS",
-                "Webstorm",
+                        "TypeScript",
+                "WebStorm",
                 "Google Cloud",
                 "Figma",
                 "Illustrator",
-                "Visual Studio Code",
+                "VS Code",
                 "Three.js",
                 "Stripe",
                 "Canvas",
+                        "Java"
             ]}
                     </TagCloud>
 );

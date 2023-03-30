@@ -1,24 +1,52 @@
 .socialMedia__container {
     width: 2%;
+    height: 0;
+    padding: 0;
 }
 
 .socialMedia__container-icons {
-    font-size: 22px;
+    font-size: 2px;
     margin-top: 12rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
+}
+
+
+.socialMedia__container-icons a {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.socialMedia__container-icons:hover a{
+    transform: scale(1);
+    opacity: .2;
+    filter: blur(1px);
+}
+
+.socialMedia__container-icons a:hover{
+    filter: blur(0);
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .git,
 .linkedin {
     color: var(--first-color);
     cursor: pointer;
-    margin-top: 0.5rem;
+    position: absolute;
 }
 
-.git:hover,
-.linkedin:hover {
-    transform: scale(1.3);
+.git {
+    margin-top: 2.5rem;
 }
+
 
 .git:active,
 .linkedin:active {

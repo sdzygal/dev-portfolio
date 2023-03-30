@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { portfolioData } from "../../utils/portfolioData";
 import "./portfolio.css";
 import { Link } from "react-router-dom";
 import { AnalyticEvent } from "../../utils/google-analytics";
+import { motion as m } from "framer-motion";
 
 const filterData = [
     {
@@ -49,25 +50,30 @@ const Portfolio = () => {
                     ))
                 }
             </ul>
-            <div className="portfolio__container-cards">
+            <div
+                className="portfolio__container-cards">
                 {
                     filteredItems.map((item, index) => (
                         <div className="portfolio__container-cards_item" key={`cardItem${item.name.trim()}`}
                         onMouseEnter={() => handleHover(index)}
                              onMouseLeave={() => handleHover(null)}
                         >
-                            <div className="portfolio__container-cards_item-image">
+                            <m.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.75, ease: "easeOut" }}
+                                className="portfolio__container-cards_item-image">
                                 <a>
                                     <img alt="project" src={item.image} />
                                 </a>
-                            </div>
+                            </m.div>
 
                             <div className="overlay">
                                 {
                                     index === hoveredValue && (
                                         <div>
                                             <p>{item.name}</p>
-                                           <Link to={item.link} target="_blank" onClick={() => AnalyticEvent("Repository Visit", "Visited")}><button>Visit repo</button></Link>
+                                           <Link to={item.link} target="_blank" onClick={() => AnalyticEvent("Repository Visit", "Visited")}><button>Open</button></Link>
                                     </div>
                                     )
                                 }
