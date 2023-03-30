@@ -55,6 +55,7 @@ html {
 body {
     background: var(--container-color);
     height: 100%;
+    width: auto;
 }
 
 #root {

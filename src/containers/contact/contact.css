@@ -1,6 +1,7 @@
 .contact__content {
-    padding: 20px;
-    margin: 4rem 9rem;
+    min-width: 100%;
+    display: block;
+    margin-top: 4rem;
     font-family: var(--body-font);
     color: var(--text-color);
 }
@@ -24,7 +25,7 @@ h1 {
 
 .projectIdea {
     border-bottom: 2px solid var(--first-color-lighter);
-    max-width: 84%;
+    max-width: 60%;
     color: var(--text-color);
     left: 18rem;
     margin-bottom: 3rem;
@@ -37,6 +38,7 @@ h1:hover {
 .contact__body {
     display: flex;
     flex-direction: row;
+    max-width: 600px;
 
 }
 
@@ -218,13 +220,14 @@ p {
 }
 
 
+@media screen and (min-width: 1900px) {
+
+}
+
+
 @media only screen and (max-width: 1200px) {
     .contact__content-form {
         width: 100%;
-    }
-
-    .projectIdea {
-        width: 70%;
     }
 
     .projectLabel li{
@@ -238,12 +241,13 @@ p {
     }
 }
 
-@media only screen and (max-width: 788px) {
-    .contact__content {
-        padding: 20px;
-        margin: 2rem 4rem;
-        font-family: var(--body-font);
-        color: var(--text-color);
+@media only screen and (max-width: 873px) {
+    .contact__body {
+        width: 500px;
+    }
+
+    .projectIdea {
+      left: 2rem;
     }
 
     .contact__content-formWrapper {
@@ -254,13 +258,6 @@ p {
         font-size: 4rem;
     }
 
-    .projectIdea {
-        font-size: 4rem;
-        max-width: 100%;
-        color: var(--text-color);
-        left: 0;
-        margin-bottom: 2rem;
-    }
 
     .inputStartDate {
         max-width: 100%;
