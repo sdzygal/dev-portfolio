@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { portfolioData } from "../../utils/portfolioData";
 import "./portfolio.css";
+import placeholderImg from "../../assets/placeholder.png";
 import { Link } from "react-router-dom";
 import { AnalyticEvent } from "../../utils/google-analytics";
 import { motion as m } from "framer-motion";
@@ -24,6 +25,26 @@ const filterData = [
 const Portfolio = () => {
     const [filteredValue, setFilteredValue] = useState(1);
     const [hoveredValue, setHoveredValue] = useState(null);
+    const imagesRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute("data-src");
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        imagesRef.current.forEach((img) => observer.observe(img));
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
     function handleFilter(currentId) {
         setFilteredValue(currentId);
@@ -69,7 +90,13 @@ const Portfolio = () => {
                                 className="portfolio__container-cards_item-image"
                             >
                                 <a>
-                                    <img alt="project" src={item.image} />
+                                    <img
+                                        alt="project"
+                                        src={placeholderImg}
+                                        data-src={item.image}
+                                        loading="lazy"
+                                        ref={(el) => (imagesRef.current[index] = el)}
+                                    />
                                 </a>
                             </m.div>
 
