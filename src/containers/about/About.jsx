@@ -2,11 +2,11 @@ import React from "react";
 import LazyLoad from 'react-lazyload';
 import './about.css';
 import imgUrl from '../../assets/ph2.png';
-import {Animate} from "react-simple-animate";
-import {DownloadButton} from "../../components/buttons/Buttons";
+import { Animate } from "react-simple-animate";
+import { DownloadButton } from "../../components/buttons/Buttons";
 import SocialMedia from "../../components/socials/SocialMedia";
 
-const professionalSummary = ' I am a promising and passionate software developer who is continuously learning and growing. I specialize in working with both front-end and back-end development. I always focus on writing highly readable, easily maintainable and scalable code, and understand the importance of creating intuitive user interfaces and testing things so they can work and optimize your code for the best performance you can make of it.';
+
 const About = () => {
     return (
         <div className="about">
@@ -59,7 +59,8 @@ const About = () => {
                             <DownloadButton  />
                             </div>
               </div>
-                </div></Animate>
+                </div>
+                </Animate>
   </div>
 
         </div>

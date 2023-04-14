@@ -15,7 +15,7 @@ const Home = () => {
         className="home__content">
         <h1>Hello, <span>I</span> <span>am Alexandra</span>
         <br/>
-            Fullstack<span> Web</span> <span>Developer</span>
+            Full-Stack<span> Web</span> <span>Developer</span>
         </h1>
     </m.div>
 

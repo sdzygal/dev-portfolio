@@ -5,6 +5,7 @@ import cvLink from "../../assets/pdf/Alexandra_Dzygal_Resume.pdf";
 import { AnalyticEvent } from "../../utils/google-analytics";
 
 
+// Button click tracking
 const ButtonClickTracking = (buttonName) => {
     AnalyticEvent("Button Click", buttonName);
 }
@@ -26,3 +27,4 @@ export const DownloadButton = () => {
     </div>
     );
 };
+

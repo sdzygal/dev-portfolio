@@ -25,6 +25,8 @@ function App() {
     const renderParticle = location.pathname === "/";
 
     ReactGA._gaCommandSendPageviewParameters(window.location.pathname + window.location.search);
+
+
   return (
     <div className="App">
         {
