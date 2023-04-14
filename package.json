@@ -6,9 +6,6 @@
     "@emailjs/browser": "^3.10.0",
     "@frank-mayer/react-tag-cloud": "^1.1.1",
     "@svgr/webpack": "^7.0.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "email-js": "^2.0.2",
     "framer-motion": "^10.10.0",
     "rc-progress": "^3.4.1",
@@ -29,7 +26,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "vitest --run --reporter verbose --globals",
+    "test:watch": "vitest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "vitest": "^0.30.1"
   }
 }

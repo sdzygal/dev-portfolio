@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { DiProlog } from 'react-icons/di';
 import { TfiAlignLeft } from 'react-icons/tfi';
 import { HiX } from 'react-icons/hi';
 import { BiMoon, BiSun } from 'react-icons/bi';
 import { Link } from "react-router-dom";
 import './navbar.css';
+import PageNotFound from "../../containers/not_found/PageNotFound";
+
 
 const navbarData = [
     {
@@ -34,9 +36,11 @@ const Navbar = () => {
     const [changeTheme, setChangeTheme] = useState(false);
     const [theme, setTheme] = useState('light');
 
+
   const handleToggleClick = () => {
         setToggleClick(!toggleClick);
   };
+
 
     const handleChangeTheme = () => {
         setChangeTheme(!changeTheme);
@@ -50,8 +54,7 @@ const Navbar = () => {
         document.body.className = theme;
     }, [theme]);
 
-
-
+    try {
     return (
       <div className="navbar">
               <div className="navbar__container">
@@ -79,6 +82,10 @@ const Navbar = () => {
           </div>
       </div>
     );
-};
+    } catch (error) {
+        console.log(error);
+        return <PageNotFound />
+    }
+    };
 
 export default Navbar;
